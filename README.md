@@ -13,7 +13,7 @@ An evidence-driven AI pipeline for auditing digital news compliance.
 
 ## From a spreadsheet to a reviewable decision
 
-Online news sites use inconsistent layouts and disclosure labels. PressPatrol combines deterministic extraction with gated text/vision agents, preserves the supporting evidence, and routes uncertain findings to human reviewers.
+PressPatrol supports inspections under Korea's **Act on the Promotion of Newspapers, etc. and its Enforcement Decree**, focusing on website operation and mandatory disclosures under Article 21. Rules, API agents, and saved evidence produce preliminary findings; **a human reviewer must recheck the evidence and make the final determination**.
 
 ![Hand-drawn pipeline: registry, collection and rules, browser capture, saved HTML extraction, AI review, evidence and export, human verification](assets/pipeline.svg)
 
@@ -41,4 +41,4 @@ For a live run, follow [setup and API-key configuration](ver_1/skill/SETUP.md). 
 - [API agents and their source](ver_1/skill/agents/README.md) · [unit costs and calculation limits](ver_1/skill/COSTS.md)
 - [Human review workspace](ver_1/review_ui/README.md) · [architecture](docs/architecture.md) · [design decisions](docs/design-decisions.md) · [validation](docs/validation.md)
 
-AI findings are drafts pending required human verification. Reprocessing execution and final human-review XLSX integration remain unconnected. No reuse license has been selected.
+Reprocessing execution and final human-review XLSX integration remain unconnected. No reuse license has been selected.
