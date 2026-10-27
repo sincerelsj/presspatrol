@@ -4,7 +4,7 @@ Checked 2026-10-27 against the complete file set, the sample workbook's XML, and
 
 ## Removed from the public snapshot
 
-- Original sample records, real names, postal addresses and contact fields. The replacement is 20 fully synthetic records with the same 40-column input schema.
+- Original sample records, real names, postal addresses and contact fields. The replacement is 20 anonymized records with the same 40-column input schema. At the owner's request, only the primary/secondary homepage URL fields retain actual public URLs; personal contact fields remain blank and people labels remain fictional.
 - A non-example fixture email, a real-case name/contact example, and real contact details in source comments and report text.
 - User-specific machine paths and real residential-address examples in prompts/docstrings.
 - Private-history commit metadata containing a personal email. Public commits use GitHub's privacy-preserving author address.
@@ -19,6 +19,6 @@ The predecessor repository remains private as an archive. The public repository 
 
 ## Automated checks
 
-The commit/push scanner rejects known key patterns, non-example email addresses, unapproved phone numbers, personal home paths, and unapproved data/evidence files. It enforces blank contact fields, synthetic people labels, reserved sample URLs, and the 20-record limit. CI additionally scans all reachable commit versions and checks author/committer privacy addresses.
+The commit/push scanner rejects known key patterns, non-example email addresses, unapproved phone numbers, personal home paths, and unapproved data/evidence files. It enforces blank contact fields, synthetic people labels, homepage URLs without credentials, query parameters or fragments, and the 20-record limit. CI additionally scans all reachable commit versions and checks author/committer privacy addresses.
 
-The extraction fixture expectations are unchanged. Seven archive safety tests and ten review tests passed locally; the offline extraction/comparison/workbook regression also passed. Pattern scanning and manual review reduce disclosure risk but cannot establish the absence of every possible identifying detail.
+The extraction fixture expectations are unchanged. Eight archive safety tests and ten review tests passed locally; the offline extraction/comparison/workbook regression also passed. Pattern scanning and manual review reduce disclosure risk but cannot establish the absence of every possible identifying detail.

@@ -31,4 +31,4 @@ From the repository root:
 python news-audit-skill/tests/disclosure_fixture_e2e.py
 ```
 
-The fixture harness generates ten local records and asserts fixed outputs through extraction, comparison and final XLSX. Do not alter expected values just to make a regression pass. Its synthetic cases are separate from the included 20-record synthetic input sample.
+The fixture harness generates ten local records and asserts fixed outputs through extraction, comparison and final XLSX. Do not alter expected values just to make a regression pass. Its synthetic cases are separate from the included 20-record anonymized input sample.

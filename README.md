@@ -32,7 +32,7 @@ python news-audit-skill/tests/disclosure_fixture_e2e.py
 python -m unittest discover -s ver_1/review_ui -p "test_*.py" -v
 ```
 
-For a live run, follow [setup and API-key configuration](ver_1/skill/SETUP.md). The [20-record synthetic registry sample](examples/registry/README.md) preserves the input schema without original contact details; offline fixtures generate their own data.
+For a live run, follow [setup and API-key configuration](ver_1/skill/SETUP.md). The [20-record anonymized registry sample](examples/registry/README.md) retains actual homepage URLs while omitting personal contact details; offline fixtures generate their own data.
 
 ## Explore the implementation
 

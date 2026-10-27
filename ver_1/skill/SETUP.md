@@ -38,7 +38,7 @@ python ver_1/skill/scripts/inspect_registry.py examples/registry/registry_sample
 .\ver_1\run_full.ps1 -InputXlsx examples/registry/registry_sample.xlsx -WorkDir ver_1/run_sample -DryRun
 ```
 
-The included 20 sample records are fictional and their `.invalid` URLs are intentionally non-operational. For a live run, use your own local registry, review its mapping and plan, then remove `-DryRun`. A live run visits external sites and can incur API charges. Use the offline fixture harness for local reproduction.
+The sample retains 20 actual homepage URLs; its registration and person labels are fictional, so comparisons are not real inspection findings. For a meaningful live inspection, supply your own accurate local registry. Review mapping and the plan before removing `-DryRun`: live runs visit sites and can incur API charges. Use the offline fixture harness for local reproduction.
 
 ## Repository credential checks
 

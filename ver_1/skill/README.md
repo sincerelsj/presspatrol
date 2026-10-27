@@ -20,7 +20,7 @@ python ver_1/skill/scripts/inspect_registry.py examples/registry/registry_sample
 .\ver_1\run_full.ps1 -InputXlsx examples/registry/registry_sample.xlsx -WorkDir ver_1/run_sample -DryRun
 ```
 
-The mapping is a human gate. Review it before a real run. The included `.invalid` sample URLs are not live targets. With your own local registry, `-SkipLlm` collects without model calls; browser dependencies are still required and sites will be visited. Paid execution requires [configuration](SETUP.md).
+The mapping is a human gate. Review it before a real run. The sample contains actual homepage URLs and fictional registration/person labels. `-SkipLlm` collects without model calls; browser dependencies are still required and sites will be visited. Use your own accurate local registry for meaningful registration comparisons. Paid execution requires [configuration](SETUP.md).
 
 Use `-SkipCapture` only with an existing evidence directory. Keep `-Workers` at eight or fewer. Sequential calls are the intended mode; inherited batch code is preserved for source history but is not the recommended or tested archive workflow.
 

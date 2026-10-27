@@ -6,6 +6,8 @@ import re
 import subprocess
 import sys
 import zipfile
+import ipaddress
+from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 
 PATTERNS = {
@@ -26,6 +28,20 @@ FIXTURE_PHONES = {b''.join(parts) for parts in [
     (b'031',b'111',b'2222'), (b'033',b'111',b'5555'),
 ]}
 FIXTURE_PATH = 'news-audit-skill/tests/disclosure_fixture_e2e.py'
+
+def homepage_url_allowed(value):
+    """Syntax/privacy check only; never visits or judges the site."""
+    try:
+        u=urlsplit(value if '://' in value else 'https://'+value)
+        host=u.hostname or ''
+        if u.scheme not in {'http','https'} or not host or u.username or u.password or u.query or u.fragment:
+            return False
+        if host.lower()=='localhost' or host.lower().endswith(('.local','.internal')):
+            return False
+        try:return ipaddress.ip_address(host).is_global
+        except ValueError:return '.' in host
+    except ValueError:
+        return False
 
 def contact_issues(name, payload):
     issues=[]
@@ -86,8 +102,8 @@ def scan_blob(name, data):
                                     problems.append('sample-contact-field-must-be-blank')
                                 if header in {'발행인','편집인'} and value and not re.fullmatch(r'가상담당자\d{3}',value):
                                     problems.append('sample-person-must-be-synthetic')
-                                if header in {'URL','발행소 홈페이지'} and value and not value.endswith('.example.invalid'):
-                                    problems.append('sample-url-must-be-invalid-domain')
+                                if header in {'URL','발행소 홈페이지'} and value and not homepage_url_allowed(value):
+                                    problems.append('sample-url-must-be-http-without-credentials-or-parameters')
                     if xml.findall('.//s:f',XML_NS):
                         problems.append('sample-formulas')
                 if any(n.startswith(('xl/externalLinks/','xl/embeddings/')) or n.endswith('vbaProject.bin') for n in names):

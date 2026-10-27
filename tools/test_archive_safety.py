@@ -43,6 +43,13 @@ class ArchiveSafetyTests(unittest.TestCase):
         self.assertEqual(scan_blob(FIXTURE_PATH,value),[])
         self.assertIn('unapproved-phone-number',scan_blob('notes.md',value))
 
+    def test_homepage_urls_allow_public_hosts_without_credentials(self):
+        from check_secrets import homepage_url_allowed
+        self.assertTrue(homepage_url_allowed('www.example.org'))
+        self.assertTrue(homepage_url_allowed('https://example.org/news'))
+        for value in ['https://user:password@example.org','https://example.org?token=example','mailto:person@example.invalid','http://127.0.0.1','http://localhost']:
+            self.assertFalse(homepage_url_allowed(value))
+
     def test_staged_key_is_blocked_even_if_working_file_is_clean(self):
         with tempfile.TemporaryDirectory(dir=ROOT/'ver_1') as tmp:
             def git(*args):

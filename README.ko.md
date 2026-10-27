@@ -18,7 +18,7 @@
 - [에이전트 역할·입출력·실제 소스](ver_1/skill/agents/README.md)
 - [단가·캐시·비용 계산과 한계](ver_1/skill/COSTS.md)
 - [관리자·검토자 UI](ver_1/review_ui/README.md)
-- [가상 입력 20건 샘플](examples/registry/README.md)
+- [홈페이지 URL 포함 20건 샘플](examples/registry/README.md)
 - [설계 결정](docs/design-decisions.md) / [검증 범위](docs/validation.md)
 
-실행 명령은 [영문 README](README.md)에 있습니다. 입력 형식만 보존한 가상 데이터 20건을 포함하며 실제 조사 데이터·연락처·계정 DB·원본 증빙·API 키는 올리지 않습니다.
+실행 명령은 [영문 README](README.md)에 있습니다. 샘플 20건의 실제 홈페이지 URL은 포함하며, 실명·전화번호·이메일·상세 주소·계정 DB·원본 증빙·API 키는 공개하지 않습니다.

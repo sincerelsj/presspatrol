@@ -13,10 +13,10 @@ The E2E harness requires an absolute `--out` path when one is supplied and retai
 
 These checks validate the covered behavior, not real-world model accuracy, live browser collection, provider availability, production security, or Linux deployment. The CI workflow is configured separately; its first remote result must be checked on GitHub.
 
-## Feature documentation and synthetic sample
+## Feature documentation and anonymized sample
 
 The root README was shortened to 44 lines and detailed guides moved into their owning feature directories. The pipeline sketch was rendered and visually checked; its handwriting is outlined in SVG so it does not depend on a viewer having the font installed.
 
-The public sample contains exactly 20 fully synthetic records in one sheet with 40 source-schema columns. No original record values, contact details, formulas, or external links are retained. Mapping was checked without visiting sites. The rendered preview was inspected for readability.
+The public sample contains exactly 20 anonymized records in one sheet with 40 source-schema columns. Only the 20 primary and 9 available secondary homepage URLs are restored from the original selection; other original values and personal contact fields are excluded. URL syntax and credentials/parameters were checked without visiting sites. All non-URL values were verified unchanged during restoration, and the rendered preview was reviewed.
 
-The configuration loader was restricted to this repository's `.env` and placeholder keys are rejected. Seven archive checks cover credential-pattern detection without echoing values, staged-blob detection even when a working file is clean, forbidden data/config paths, the 20-record sample boundary, and parent-config isolation, real-contact rejection, and fixture-scoped synthetic numbers. Extraction fixture expectations remain unchanged. The existing 10 review tests still pass.
+The configuration loader was restricted to this repository's `.env` and placeholder keys are rejected. Eight archive checks cover credential-pattern detection without echoing values, staged-blob detection even when a working file is clean, forbidden data/config paths, the 20-record sample boundary, and parent-config isolation, real-contact rejection, and fixture-scoped synthetic numbers. Extraction fixture expectations remain unchanged. The existing 10 review tests still pass.

@@ -1,12 +1,18 @@
 {
-  "data_kind": "fully synthetic records using the original 40-column input schema",
+  "data_kind": "20 anonymized records retaining actual public homepage URLs",
   "record_count": 20,
   "column_count": 40,
-  "generated_on": "2026-10-27",
-  "original_record_values_included": false,
+  "updated_on": "2026-10-27",
+  "original_record_values_included": true,
+  "original_fields_included": [
+    "URL",
+    "발행소 홈페이지"
+  ],
   "personal_contacts_included": false,
   "identifier_policy": "S001-S020 and fictional sample labels",
-  "url_policy": "reserved .invalid domains only; not live inspection targets",
-  "contact_policy": "phone, postal address and printing-contact fields are blank",
-  "sample_sha256": "b8650c2715dbae9b755e97d3aa61d5097a2c276a54e3739a6ec8b33d6866b37a"
+  "url_policy": "actual homepage URLs from the first 20 source records; no authentication, query parameters or fragments",
+  "primary_url_count": 20,
+  "secondary_url_count": 9,
+  "contact_policy": "phone, postal address and printing-contact fields remain blank; people labels remain fictional",
+  "sample_sha256": "71ab414e98a9e8d48f6431a1dfc2c748754c9205e0245a3691371b3c402a9a01"
 }
