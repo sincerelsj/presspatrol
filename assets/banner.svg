@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">PressPatrol</title>
+  <desc id="desc">A digital inspector for online news. Collect, inspect, preserve evidence, verify.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#111d2c"/><stop offset="1" stop-color="#123b42"/></linearGradient></defs>
+  <rect width="1200" height="360" rx="24" fill="url(#bg)"/>
+  <g fill="none" stroke="#36616a" opacity=".5"><path d="M800 0v360M900 0v360M1000 0v360M1100 0v360M700 90h500M700 180h500M700 270h500"/></g>
+  <text x="64" y="65" fill="#7ee0c3" font-family="Segoe UI,Arial,sans-serif" font-size="15" letter-spacing="4">EVIDENCE-DRIVEN AI ENGINEERING</text>
+  <text x="60" y="157" fill="#f4f8fb" font-family="Segoe UI,Arial,sans-serif" font-weight="700" font-size="76">PressPatrol</text>
+  <text x="64" y="203" fill="#b8ced4" font-family="Segoe UI,Arial,sans-serif" font-size="25">A digital inspector for online news.</text>
+  <rect x="64" y="253" width="635" height="47" rx="10" fill="#203f49" stroke="#426770"/>
+  <text x="85" y="283" fill="#d9f6ee" font-family="Segoe UI,Arial,sans-serif" font-size="18">COLLECT  /  INSPECT  /  PRESERVE EVIDENCE  /  VERIFY</text>
+  <g transform="translate(880 83)">
+    <rect width="170" height="197" rx="14" fill="#18313d" stroke="#6a9c9e" stroke-width="2"/>
+    <rect x="23" y="25" width="85" height="13" rx="3" fill="#d8eeef"/>
+    <path d="M23 62h120M23 78h120M23 94h74M23 121h95M23 137h65M23 153h78" stroke="#5b8790" stroke-width="7"/>
+    <circle cx="148" cy="149" r="51" fill="#153c40" stroke="#7ee0c3" stroke-width="4"/>
+    <path d="m125 149 16 16 31-35" fill="none" stroke="#7ee0c3" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

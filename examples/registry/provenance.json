@@ -1,0 +1,12 @@
+{
+  "data_kind": "fully synthetic records using the original 40-column input schema",
+  "record_count": 20,
+  "column_count": 40,
+  "generated_on": "2026-10-27",
+  "original_record_values_included": false,
+  "personal_contacts_included": false,
+  "identifier_policy": "S001-S020 and fictional sample labels",
+  "url_policy": "reserved .invalid domains only; not live inspection targets",
+  "contact_policy": "phone, postal address and printing-contact fields are blank",
+  "sample_sha256": "b8650c2715dbae9b755e97d3aa61d5097a2c276a54e3739a6ec8b33d6866b37a"
+}

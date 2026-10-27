@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>신문산업 실태점검 · 점검 작업실</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/admin-style.css"><link rel="stylesheet" href="/prototype.css"></head>
+<body class="prototype-ui">
+<aside class="rail" aria-label="메뉴와 매체 목록: 왼쪽 가장자리에 마우스를 올려 펼치기"><div class="brand">N<span>2026</span></div><div class="rail-label">실태점검<br>점검 작업실</div><nav><button id="nav-work" class="active">▤<span>내 작업함</span></button><button id="nav-setup">⚙<span>학습자료</span></button><button id="nav-jobs">↻<span>추가 확인 요청</span></button></nav><div class="rail-bottom">인터넷신문<br>필요적 게재사항</div></aside>
+<main>
+<header><div><div class="eyebrow">2026 신문산업 실태점검 / 필요적 게재사항</div><h1>매체 점검 <span class="demo">예시 배정</span></h1></div><div class="header-right"><span class="server-status"><i></i> 서버 저장</span><span class="avatar">01</span><div><b id="reviewer">조사자 01</b><small></small></div></div></header>
+<section class="overview"><div class="overview-intro"><span>예시 매체</span><strong id="total">—</strong><small id="source-date">기준일 확인 중</small></div><div class="progress-box"><div><b>점검 진행률</b><span id="progress-label">0 / 1,000</span></div><progress id="progress" value="0" max="1000"></progress><small>모든 단계를 승인한 매체만 완료로 집계합니다.</small></div><div class="stat"><span>점검 완료</span><strong id="completed">0</strong></div><div class="stat"><span>보류</span><strong id="held">0</strong></div><div class="stat"><span>추가 확인 대기</span><strong id="queued">0</strong></div><button id="export" class="secondary">↓ 결과 내보내기</button></section>
+<div id="setup-banner" class="banner" hidden><span>점검 시작 전 학습자료에서 홈페이지 운영 현황과 필요적 게재사항을 확인해 주세요.</span><button id="start-setup">학습자료·준비 확인 →</button></div>
+<section id="workspace" class="workspace">
+<section class="list-panel"><div class="panel-head"><h2>매체 목록 <span id="filtered-count"></span></h2><button id="refresh" class="icon" title="서버에서 새로 불러오기">↻</button></div><label class="search"><span>⌕</span><input id="search" placeholder="제호, 매체 ID, URL 검색" aria-label="매체 검색"></label><div class="filters"><select id="state-filter" aria-label="점검 상태"><option value="">전체 상태</option><option value="pending">미점검</option><option value="reviewing">점검 중</option><option value="held">보류</option><option value="reprocess">추가 확인 대기</option><option value="completed">점검 완료</option></select><select id="issue-filter" aria-label="점검 분류"><option value="">전체 분류</option><option value="flagged">확인필요</option><option value="미준수">AI 미준수</option><option value="홈페이지없음">홈페이지 없음</option><option value="evidence">증빙 누락</option></select></div><div class="list-caption"><span>매체 / AI 점검 결과</span><span>점검 상태</span></div><div id="business-list" class="business-list" aria-label="배정 매체 목록"></div><div class="pagination"><button id="prev-page">←</button><span id="page-label"></span><button id="next-page">→</button></div></section>
+<section class="detail-panel" id="detail"><div class="loading">배정 데이터를 불러오는 중입니다.</div></section>
+</section>
+</main>
+<dialog id="modal"><div id="modal-content"></div><button class="modal-close" id="close-modal" aria-label="닫기">×</button></dialog>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+<script src="/app.js"></script>
+</body></html>
